@@ -20,6 +20,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.flowlayout.FlowRow
 import dev.surehand.crypto.presentation.screen.coin_detail.components.CoinTag
 import dev.surehand.crypto.presentation.screen.coin_detail.components.TeamListItem
+import dev.surehand.crypto.presentation.ui.theme.spacing
 
 @Composable
 @ExperimentalMaterial3Api
@@ -31,7 +32,7 @@ fun CoinDetailScreen(
         state.coin?.let { coin ->
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(20.dp)
+                contentPadding = PaddingValues(MaterialTheme.spacing.medium)
             ) {
                 item {
                     Row(
@@ -98,7 +99,7 @@ fun CoinDetailScreen(
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 20.dp)
+                    .padding(horizontal = MaterialTheme.spacing.medium)
                     .align(Alignment.Center)
             )
         }
